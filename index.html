@@ -1,0 +1,655 @@
+c   <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPM UKRI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="img/Logo web.png">
+    <style>
+        /* Animasi Fade In */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Animasi Slide Up */
+        .slide-up {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+        }
+        .slide-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Animasi Zoom In */
+        .zoom-in {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+        }
+        .zoom-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        /* Animasi Fade In Left */
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+        }
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        /* Animasi Fade In Right */
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+        }
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        /* Untuk animasi delay */
+        [data-anim-delay] {
+            transition-delay: var(--anim-delay, 0s);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar fade-in" data-anim-delay="0.1s">
+            <div class="logo">
+                <h1>
+                    <img src="img/Logo web.png" alt="Logo" width="40" height="40" style="vertical-align: middle; margin-right: 5px;">
+                    DPM <span>UKRI</span>
+                </h1>
+            </div>
+            <ul class="nav-links" style="margin: 0 auto;">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Visi & Misi</a></li>
+                <li><a href="#struktur">Tupoksi</a></li>
+                <li><a href="#portfolio">Struktur Organisasi</a></li>
+                <li><a href="#produk">Produk Hukum</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+            </ul>
+            <div class="contact-nav">
+                <a href="#aspirasi" class="nav-btn">Aspirasi Online</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content zoom-in" data-anim-delay="0.2s">
+            <h1>Dewan Perwakilan Mahasiswa</h1>
+            <h2>Universitas Kebangsaan Republik Indonesia</h2>
+            <a href="#about" class="cta-btn">Seputar DPM UKRI</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="about" class="services">
+        <h2 class="mb-5 fade-in" data-anim-delay="0.1s">VISI DAN MISI DPM</h2>
+        <div style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">
+            <h3 class="fade-in" style="display: inline-block;" data-anim-delay="0.2s">Parlemen Adiwarna</h3>
+        </div>
+        <div class="service-grid">
+            <div class="service-card slide-up" data-anim-delay="0.2s">
+                <i class="visi"></i>
+                <h3 class="mb-4">VISI</h3>
+                <p>Menjadi wadah perwakilan mahasiswa yang progresif,responsif, proaktif dan inklusif yang mencerminkan keberagaman aspirasi serta menciptakan lingkungan kampus yang harmonis</p>
+            </div>
+            <div class="service-card slide-up" data-anim-delay="0.4s">
+                <i class="misi"></i>
+                <h3 class="mb-4">MISI</h3>
+                <p>
+                    <li>Mewakili Berbagai Suara : 
+                    <p>Menggali dan menyampaikan aspirasi seluruh mahasiswa tanpa memandang latar belakang, demi terciptanya kebijakan yang adil dan merata</p></li>
+                    <li>Advokasi Hak Mahasiswa :
+                    <p>Membela dan memperjuangkan hak serta kepentingan mahasiswa, serta memberikan dukungan kepada mereka yang membutuhkan</p></li>
+                    <li>Inovasi dan kreativitas :
+                    <p>Mendorong pengembangan ide-ide kreatif dan solusi inovatif untuk meningkatkan kualitas kehidupan kampus dan kesejahteraan mahasiswa</p>
+                    </li>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tupoksi Section -->
+    <section id="struktur" class="tupoksi-section">
+        <div class="tupoksi-container">
+            <h2 class="tupoksi-title fade-in" data-anim-delay="0.1s">TUGAS DPM UKRI</h2>
+            <h3 class="tupoksi-title fade-in" style="font-size:2rem;" data-anim-delay="0.2s">Parlemen Adiwarna</h3>
+            <div class="tupoksi-structure">
+                <!-- Ring 1 -->
+                <div class="tupoksi-level tupoksi-bpi">
+                    <div class="tupoksi-box zoom-in" data-anim-delay="0.1s" onclick="showTupoksiInfo('sekretarisumum')">Sekretaris Umum</div>
+                    <div class="tupoksi-box zoom-in" data-anim-delay="0.2s" onclick="showTupoksiInfo('ketuaumum')">Ketua Umum</div>
+                    <div class="tupoksi-box zoom-in" data-anim-delay="0.3s" onclick="showTupoksiInfo('bendaharaumum')">Bendahara Umum</div>
+                </div>
+                <div class="tupoksi-level tupoksi-komisi">
+                    <div class="tupoksi-box fade-in-left" data-anim-delay="0.1s" onclick="showTupoksiInfo('tugaskomisi1')">Komisi 1</div>
+                    <div class="tupoksi-box fade-in-left" data-anim-delay="0.2s" onclick="showTupoksiInfo('tugaskomisi2')">Komisi 2</div>
+                    <div class="tupoksi-box fade-in-right" data-anim-delay="0.3s" onclick="showTupoksiInfo('tugaskomisi3')">Komisi 3</div>
+                    <div class="tupoksi-box fade-in-right" data-anim-delay="0.4s" onclick="showTupoksiInfo('tugaskomisi4')">Komisi 4</div>
+                </div>
+
+                <div id="info-container">
+                    <p id="info-text" class="tupoksi-info fade-in" data-anim-delay="0.5s">Klik masing-masing bagian di atas ini untuk melihat tugas tiap bagiannya</p>
+                </div>
+
+                <script>
+                    function showTupoksiInfo(bagiantugas) {
+                        let infoText = document.getElementById('info-text');
+                        infoText.classList.remove('visible');
+                        setTimeout(function() {
+                            switch (bagiantugas) {
+                                case 'sekretarisumum':
+                                    infoText.innerHTML = `
+                                        <strong>Sekretaris Umum</strong>
+                                        <br><br>
+                                        <ul>
+                                            <li>Pengganti ketua jika berhalangan dengan disertai tugas dan wewenang yang sama</li>
+                                            <li>Mengkoordinasikan masing-masing komisi dalam melaksanakan tugas-tugas serta program kerja yang disusun</li>
+                                            <li>Melaksanakan koordinasi dan konsolidasi dalam bidang administrasi, kesekretariatan, dan internal DPM dan bertanggung jawab kepada ketua DPM</li>
+                                            <li>Menyusun dan melaksanakan rapat harian DPM</li>
+                                        </ul>
+                                    `;
+                                    break;
+                                case 'ketuaumum':
+                                    infoText.innerHTML = `
+                                        <strong>Ketua Umum</strong>
+                                        <br><br>
+                                        <ul>
+                                            <li>Penanggung Jawab DPM UKRI Parlemen Adiwarna</li>
+                                            <li>Melakukan Koordinasi dan konsolidasi iternal maupun eksternal yang berkaitan dengan tugas dan fungsi DPM UKRI</li>
+                                            <li>Dapat mendelegasikan wewenangnya kepada seluruh anggota DPM sesuai dengan pembagian tugas yang ada</li>
+                                            <li>Dalam masalah tertentu dapat mengambil kebijaksanaan sebagai alternatif terakhir</li>
+                                            <li>Selalu berkoordinasi serta konsolidasi dengan BEM dan WR III Bidang Kemahasiswaan dan Alumni UKRI</li>
+                                        </ul>
+                                    `;
+                                    break;
+                                case 'bendaharaumum':
+                                    infoText.innerHTML = `
+                                        <strong>Bendahara Umum</strong>
+                                        <br><br>
+                                        <ul>
+                                            <li>Pemegang kebijaksanaan umum dalam masalah pengelolaan keuangan</li>
+                                            <li>Mengatur dan mengelola bukti transaksi</li>
+                                            <li>Menyusun laporan, rencana anggaran ,dan pembukuan</li>
+                                            <li>Melaksanakan pengelolaan keuangan dan pengadaan kebutuhan barang organisasi</li>
+                                            <li>Melaporkan segala pengelolaan keuangan selama satu bulan sekali kepada DPM</li>
+                                        </ul>
+                                    `;
+                                    break;
+                                case 'tugaskomisi1':
+                                    infoText.innerHTML = `
+                                        <strong>Komisi 1</strong>
+                                        <br><br>
+                                        <ul>
+                                            <li>Menjaga profesionalisme kerja agar tidak terjadi tumpang tindih tugas dan wewenang lembaga kemahasiswaan</li>
+                                            <li>Mengisi kekosongan yang terjadi dan tidak bisa dituntaskan terhadap hal-hal yang berkaitan dengan KEMA UKRI yang tidak diatur didalam AD/ART, GBHO atau PO KEMA UKRI</li>
+                                            <li>Melakukan pengawasan terhadap setiap kebijakkan yang dikeluarkan oleh UKRI</li>
+                                        </ul>
+                                    `;
+                                    break;
+                                case 'tugaskomisi2':
+                                    infoText.innerHTML = `
+                                        <strong>Komisi 2</strong>
+                                        <br><br>
+                                        <ul>
+                                            <li>Melakukan pengawasan terhadap setiap kebijakan dan kegiatan yang dilakukan oleh BEM, HMJ, dan UKM</li>
+                                            <li>Mengumpulkan laporan kegiatan BEM setiap 3 bulan sekali</li>
+                                            <li>Menerima laporan pertanggungjawaban kegiatan HMJ dan UKM/li>
+                                        </ul>
+                                    `;
+                                    break;
+                                case 'tugaskomisi3':
+                                    infoText.innerHTML = `
+                                        <strong>Komisi 3</strong>
+                                        <br><br>
+                                        <ul>
+                                            <li>Melakukan koordinasi rutin dengan Himpunan dan UKM</li>
+                                            <li>mengakomodir setiap aspirasi dari Himpunan dan UKM</li>
+                                            <li>Menghadiri setiap kegiatan yang diadakan oleh Himpunan dan UKM apabila diundang</li>
+                                        </ul>
+                                    `;
+                                    break;
+                                case 'tugaskomisi4':
+                                    infoText.innerHTML = `
+                                        <strong>Komisi 4</strong>
+                                        <br><br>
+                                        <ul>
+                                            <li>Melakukan koordinasi dengan Stakeholder DPM di eksternal kampus Universitas Kebangsaan Republik Indonesia</li>
+                                            <li>Menjaga keanggotaan DPM Universitas Kebangsaan Republik Indonesia di Forum Lembaga Legislatif Mahasiswa Indonesia (FL2MI)</li>
+                                            <li>Mengelola, menerima dan memberikan informasi melalui Media Sosial</li>
+                                        </ul>
+                                    `;
+                                    break;
+                                default:
+                                    infoText.innerHTML = 'Klik masing-masing bagian di atas ini untuk melihat tugas tiap bagiannya.';
+                            }
+                            infoText.classList.add('visible');
+                        }, 200);
+                    }
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Struktur Organisasi Section -->
+    <section id="portfolio" class="struktur-organisasi">
+        <div class="container">
+            <h2 class="section-title fade-in" data-anim-delay="0.1s">Struktur Organisasi DPM UKRI</h2>
+            <h2 class="section-subtitle fade-in" data-anim-delay="0.2s">PARLEMEN ADIWARNA</h2>
+            <p class="period fade-in" data-anim-delay="0.3s">Periode Kepengurusan 2025-2026</p>
+            <div class="struktur-wrapper">
+
+                <!-- Ketua DPM -->
+                <div class="org-level level-1 zoom-in" data-anim-delay="0.2s">
+                    <div class="org-card">
+                        <div class="org-image">
+                            <img src="img/1.png" alt="Ketua DPM" class="clickable-org-img">
+                        </div>
+                        <div class="org-content">
+                            <h3>Ketua DPM</h3>
+                            <p>Farhan Fadillah</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sekretaris & Bendahara -->
+                <div class="org-level level-3 fade-in" data-anim-delay="0.3s">
+                    <div class="org-card">
+                        <div class="org-image">
+                            <img src="img/2.png" alt="Sekretaris" class="clickable-org-img">
+                        </div>
+                        <div class="org-content">
+                            <h3>Sekretaris Umum DPM</h3>
+                            <p>Bintang Raya</p>
+                        </div>
+                    </div>
+                    <div class="org-card">
+                        <div class="org-image">
+                            <img src="img/3.png" alt="Bendahara" class="clickable-org-img">
+                        </div>
+                        <div class="org-content">
+                            <h3>Bendahara Umum DPM</h3>
+                            <p>Lenie Najwa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Komisi-Komisi -->
+                <div class="tupoksi-level tupoksi-komisi">
+                    <div class="tupoksi-box fade-in-left" data-anim-delay="0.1s" onclick="showStrukturInfo('komisi1')">
+                        Komisi 1
+                    </div>
+                    <div class="tupoksi-box fade-in-left" data-anim-delay="0.2s" onclick="showStrukturInfo('komisi2')">
+                        Komisi 2
+                    </div>
+                    <div class="tupoksi-box fade-in-right" data-anim-delay="0.3s" onclick="showStrukturInfo('komisi3')">
+                        Komisi 3
+                    </div>
+                    <div class="tupoksi-box fade-in-right" data-anim-delay="0.4s" onclick="showStrukturInfo('komisi4')">
+                        Komisi 4
+                    </div>
+                </div>
+                <div id="komisi-info" class="komisi-info fade-in" data-anim-delay="0.5s">
+                    <p id="komisi-text">Klik pada komisi untuk melihat informasi.</p>
+                </div>
+                <script>
+                    function showStrukturInfo(bagian) {
+                        let komisiText = document.getElementById('komisi-text');
+                        komisiText.classList.remove('visible');
+                        setTimeout(function() {
+                            switch (bagian) {
+                                case 'komisi1':
+                                    komisiText.innerHTML = `
+                                        <h3>Komisi 1</h3>
+                                        <ul>
+                                            <li class="member-box zoom-in" data-anim-delay="0.1s">
+                                                <img src="img/4.png" alt="Anggota 1" class="clickable-org-img">
+                                                <div class="org-contents">
+                                                    <h3>Ketua Komisi<h3>
+                                                    <p>Afif Abdurachman<p>
+                                                </div>
+                                            </li>
+                                            <li class="member-box zoom-in" data-anim-delay="0.2s">
+                                                <img src="img/5.png" alt="Anggota 2" class="clickable-org-img">
+                                                <div class="org-contents">
+                                                    <h3>Staff<h3>
+                                                    <p>Raka Saepani P.<p>
+                                                </div>                                        
+                                            </li>
+                                            <li class="member-box zoom-in" data-anim-delay="0.3s">
+                                                <img src="img/6.png" alt="Anggota 3" class="clickable-org-img">
+                                                <div class="org-contents">
+                                                    <h3>Staff<h3>
+                                                    <p>Fahrur Rozy<p>
+                                                </div>                                        
+                                            </li>
+                                            <li class="member-box zoom-in" data-anim-delay="0.4s">
+                                                <img src="img/7.png" alt="Anggota 4" class="clickable-org-img">
+                                                <div class="org-contents">
+                                                    <h3>Staff<h3>
+                                                    <p>Adinda A. Sukma<p>
+                                                </div>                                        
+                                            </li>
+                                        </ul>`;
+                                    break;
+                                case 'komisi2':
+                                    komisiText.innerHTML = `
+                                        <h3>Komisi 2</h3>
+                                        <ul>
+                                            <li class="member-box zoom-in" data-anim-delay="0.1s">
+                                                <img src="img/8.png" alt="Anggota 1" class="clickable-org-img">
+                                                <div class="org-contents">
+                                                    <h3>Ketua Komisi<h3>
+                                                    <p>Erio Naldo<p>
+                                                </div>                                        
+                                            </li>
+                                            <li class="member-box zoom-in" data-anim-delay="0.2s">
+                                                <img src="img/9.png" alt="Anggota 2" class="clickable-org-img">
+                                                <div class="org-contents">
+                                                    <h3>Staff<h3>
+                                                    <p>Nabila Salsabil<p>
+                                                </div>                                        
+                                            </li>
+                                        </ul>`;
+                                    break;
+                                case 'komisi3':
+                                    komisiText.innerHTML = `
+                                        <h3>Komisi 3</h3>
+                                        <ul>
+                                            <li class="member-box zoom-in" data-anim-delay="0.1s">
+                                                <img src="img/14.png" alt="Anggota 1" class="clickable-org-img">
+                                                <div class="org-contents">
+                                                    <h3>Ketua Komisi<h3>
+                                                    <p>Audy Putri N.<p>
+                                                </div>                                        
+                                            </li>
+                                            <li class="member-box zoom-in" data-anim-delay="0.2s">
+                                                <img src="img/10.png" alt="Anggota 2" class="clickable-org-img">
+                                                <div class="org-contents">
+                                                    <h3>Staff<h3>
+                                                    <p>Moch. Mukhsin Nauval<p>
+                                                </div>                                        
+                                            </li>
+                                        </ul>`;
+                                    break;
+                                case 'komisi4':
+                                    komisiText.innerHTML = `
+                                        <h3>Komisi 4</h3>
+                                        <ul>
+                                            <li class="member-box zoom-in" data-anim-delay="0.1s">
+                                                <img src="img/11.png" alt="Anggota 1" class="clickable-org-img">
+                                                <div class="org-contents">
+                                                    <h3>Ketua Komisi<h3>
+                                                    <p>Adinda Rizkia<p>
+                                                </div>                                        
+                                            </li>
+                                            <li class="member-box zoom-in" data-anim-delay="0.2s">
+                                                <img src="img/12.png" alt="Anggota 2" class="clickable-org-img">
+                                                <div class="org-contents">
+                                                    <h3>Staff<h3>
+                                                    <p>Nur Arsyila Aulia<p>
+                                                </div>                                        
+                                            </li>
+                                            <li class="member-box zoom-in" data-anim-delay="0.3s">
+                                                <img src="img/13.png" alt="Anggota 3" class="clickable-org-img">
+                                                <div class="org-contents">
+                                                    <h3>Staff<h3>
+                                                    <p>Naufal Maulana<p>
+                                                </div>                                        
+                                            </li>
+                                        </ul>`;
+                                    break;
+                                default:
+                                    komisiText.innerHTML = 'Klik pada komisi untuk melihat informasi.';
+                            }
+                            komisiText.classList.add('visible');
+                            // Tambahkan event listener ke gambar baru setelah innerHTML diubah
+                            addImageClickListeners();
+                            // Trigger animasi pada member-box
+                            setTimeout(function() {
+                                document.querySelectorAll('#komisi-info .member-box').forEach(function(el) {
+                                    el.classList.add('visible');
+                                });
+                            }, 100);
+                        }, 200);
+                    }
+
+                    // Fungsi untuk membesarkan gambar saat diklik
+                    function addImageClickListeners() {
+                        const imgs = document.querySelectorAll('.clickable-org-img');
+                        imgs.forEach(img => {
+                            img.onclick = function() {
+                                showImageModal(this.src, this.alt);
+                            }
+                        });
+                    }
+
+                    // Modal logic
+                    function showImageModal(src, alt) {
+                        let modal = document.getElementById('img-modal');
+                        let modalImg = document.getElementById('img-modal-img');
+                        let modalCaption = document.getElementById('img-modal-caption');
+                        modal.style.display = "flex";
+                        modalImg.src = src;
+                        modalCaption.textContent = alt || '';
+                    }
+
+                    function closeImageModal() {
+                        let modal = document.getElementById('img-modal');
+                        modal.style.display = "none";
+                    }
+
+                    // Inisialisasi event listener untuk gambar statis
+                    document.addEventListener('DOMContentLoaded', function() {
+                        addImageClickListeners();
+                    });
+                </script>
+                <!-- Modal untuk gambar -->
+                <div id="img-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+                    <span onclick="closeImageModal()" style="position:absolute;top:30px;right:40px;font-size:40px;color:white;cursor:pointer;font-weight:bold;">&times;</span>
+                    <img id="img-modal-img" src="" alt="" style="max-width:90vw; max-height:80vh; display:block; margin:auto; border-radius:10px; box-shadow:0 0 20px #000;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produk Section -->
+    <section id="produk" class="produk-section">
+        <div class="container">
+            <h2 class="section-title fade-in" data-anim-delay="0.1s">Produk Hukum</h2>
+            <div class="produk-list">
+                <div class="produk-item zoom-in" data-anim-delay="0.2s">
+                    <a href="PH/STANDAR OPRASIONAL PROSEDUR KEAMANAN DAN KESELAMATAN PIALA KEBANGSAAN.pdf" target="_blank" class="produk-link">
+                        <img src="img/SOP Pilkeb.png" alt="PDF" class="produk-pdf-icon-img">
+                        <div class="produk-caption">SOP Piala Kebangsaan</div>
+                        <div class="produk-filesize" data-file="PH/SOP Pengawasan.pdf">Loading...</div>
+                    </a>
+                </div>
+                <div class="produk-item zoom-in" data-anim-delay="0.3s">
+                    <a href="img/produk2.pdf" target="_blank" class="produk-link">
+                        <img src="img/Coming Soon.png" alt="PDF" class="produk-pdf-icon-img">
+                        <div class="produk-caption">Produk 2</div>
+                        <div class="produk-filesize" data-file="img/produk2.pdf">Loading...</div>
+                    </a>
+                </div>
+                <div class="produk-item zoom-in" data-anim-delay="0.4s">
+                    <a href="img/produk3.pdf" target="_blank" class="produk-link">
+                        <img src="img/Coming Soon.png" alt="PDF" class="produk-pdf-icon-img">
+                        <div class="produk-caption">Produk 3</div>
+                        <div class="produk-filesize" data-file="img/produk3.pdf">Loading...</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Ambil ukuran file PDF dan tampilkan
+            document.querySelectorAll('.produk-filesize').forEach(function(el) {
+                var url = el.getAttribute('data-file');
+                fetch(url, { method: 'HEAD' }).then(function(resp) {
+                    var size = resp.headers.get('content-length');
+                    if (size) {
+                        var kb = (size/1024).toFixed(1);
+                        el.textContent = kb + ' KB';
+                    } else {
+                        el.textContent = '-';
+                    }
+                }).catch(function() {
+                    el.textContent = '-';
+                });
+            });
+        </script>
+    </section>
+
+
+    <!-- Galeri Gambar Section -->
+    <section id="galeri" class="galeri-section">
+        <div class="container">
+            <h2 class="section-title fade-in" data-anim-delay="0.1s">Galeri Kegiatan</h2>
+            <div class="galeri-list">
+                <div class="galeri-item zoom-in" data-anim-delay="0.1s">
+                    <img src="img/kegiatan1.jpg" alt="Triwulan BEM X DPM" class="galeri-img">
+                    <div class="galeri-caption">Triwulan BEM X DPM</div>
+                </div>
+                <div class="galeri-item zoom-in" data-anim-delay="0.2s">
+                    <img src="img/kegiatan2.jpg" alt="Pengawasan LKMM" class="galeri-img">
+                    <div class="galeri-caption">Pengawasan LKMM</div>
+                </div>
+                <div class="galeri-item zoom-in" data-anim-delay="0.3s">
+                    <img src="img/kegiatan3.jpg" alt="Forum Kema X Rapat Dengar Pendapat" class="galeri-img">
+                    <div class="galeri-caption">FORUM KEMA X Rapat Dengar Pendapat</div>
+                </div>
+                <div class="galeri-item zoom-in" data-anim-delay="0.4s">
+                    <img src="img/kegiatan4.jpg" alt="Pengawasan Piala Kebangsaan" class="galeri-img">
+                    <div class="galeri-caption">Pengawasan Piala Kebangsaan</div>
+                </div>
+                <div class="galeri-item zoom-in" data-anim-delay="0.5s">
+                    <img src="img/kegiatan5.jpg" alt="Musyawarah Kerja DPM X BEM" class="galeri-img">
+                    <div class="galeri-caption">Musyawarah Kerja DPM X BEM</div>
+                </div>
+                <div class="galeri-item zoom-in" data-anim-delay="0.6s">
+                    <img src="img/kegiatan6.jpg" alt="Rapat Koordinasi bersama Ormawa" class="galeri-img">
+                    <div class="galeri-caption">Rapat Koordinasi bersama Ormawa</div>
+                </div>
+                <div class="galeri-item zoom-in" data-anim-delay="0.7s">
+                    <img src="img/kegiatan7.jpg" alt="Pelantikan DPM dan BEM" class="galeri-img">
+                    <div class="galeri-caption">Pelantikan DPM dan BEM</div>
+                </div>
+                <div class="galeri-item zoom-in" data-anim-delay="0.8s">
+                    <img src="img/Sekolah Legislatif.jpg" alt="Sekolah Legislatif" class="galeri-img">
+                    <div class="galeri-caption">Sekolah Legislatif</div>
+                </div>
+                <div class="galeri-item zoom-in" data-anim-delay="0.9s">
+                    <img src="img/Kunjungan ke BEM.jpg" alt="Kunjungan ke BEM" class="galeri-img">
+                    <div class="galeri-caption">Kunjungan ke BEM</div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal untuk gambar galeri -->
+        <div id="galeri-modal" class="galeri-modal">
+            <span class="galeri-modal-close" id="galeri-modal-close">&times;</span>
+            <img class="galeri-modal-content" id="galeri-modal-img" src="" alt="">
+            <div class="galeri-modal-caption" id="galeri-modal-caption"></div>
+        </div>
+        <script>
+            // Modal logic for galeri
+            document.querySelectorAll('.galeri-img').forEach(function(img) {
+                img.addEventListener('click', function() {
+                    var modal = document.getElementById('galeri-modal');
+                    var modalImg = document.getElementById('galeri-modal-img');
+                    var modalCaption = document.getElementById('galeri-modal-caption');
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                    modalImg.alt = this.alt;
+                    modalCaption.textContent = this.alt;
+                });
+            });
+            document.getElementById('galeri-modal-close').onclick = function() {
+                document.getElementById('galeri-modal').style.display = 'none';
+            };
+            // Close modal if click outside image
+            document.getElementById('galeri-modal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                }
+            });
+        </script>
+    </section>
+
+    <!-- Aspirasi Section -->
+    <section id="aspirasi" class="aspirasi-section">
+        <div class="aspirasi-card fade-in" data-anim-delay="0.2s">
+            <h2 class="aspirasi-title">Punya Aspirasi atau Masukan?</h2>
+            <p class="aspirasi-desc">
+                Suara Anda penting bagi kami. Sampaikan aspirasi dan masukan Anda untuk DPM UKRI yang lebih baik.
+            </p>
+            <a href="https://forms.gle/LnJ6LqfhuuvGFsTLA" target="_blank" class="aspirasi-btn">
+                Sampaikan Aspirasi Anda <span class="arrow">></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer fade-in" data-anim-delay="0.2s">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DPM UKRI</h3>
+                <p>Dewan Perwakilan Mahasiswa Universitas Kebangsaan Republik Indonesia</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> Jl. Terusan Halimun No.37, Bandung<br>
+                    <i class="fas fa-envelope"></i> dpmukri@gmail.com<br>
+                    <i class="fas fa-phone"></i> 0812-7086-5960
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Ikuti Kami</h3>
+                <div class="social-links">
+                    <a href="https://wa.me/081270865960" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/dpmkemaukri?igsh=MTkxZW4xZnYzNDNyOA=="><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DPM UKRI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fungsi untuk menampilkan animasi saat elemen masuk viewport
+        function animateOnScroll() {
+            var animatedEls = document.querySelectorAll('.fade-in, .slide-up, .zoom-in, .fade-in-left, .fade-in-right');
+            var windowHeight = window.innerHeight;
+            animatedEls.forEach(function(el) {
+                var rect = el.getBoundingClientRect();
+                var delay = el.getAttribute('data-anim-delay') || '0s';
+                el.style.setProperty('--anim-delay', delay);
+                if (rect.top < windowHeight - 60) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+</html>
